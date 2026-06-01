@@ -1,0 +1,22 @@
+# --- Power BI ---
+# Ignora o arquivo pesado do relatório (evita o limite de 10MB do Databricks)
+powerbi/*.pbix
+
+# Ignora arquivos de backup automático e configurações locais do Power BI Desktop
+powerbi/*.pbit
+powerbi/.User.twb
+powerbi/ExecutionCache/
+
+# --- Databricks / Python / Sistema ---
+# Ignora arquivos temporários ocultos que o Databricks ou o Git criam
+.DS_Store
+Thumbs.db
+*.tmp
+.databricks/
+.idea/
+.vscode/
+
+# --- Segurança (Opcional, mas recomendado) ---
+# Caso você use algum arquivo para guardar senhas ou tokens localmente
+*.env
+secrets.json

@@ -1,5 +1,5 @@
 -- =========================================================
--- 01_INIT_LANDING_TABLES.SQL
+-- 01_01_simulacao_dados_carga inicial.SQL
 -- Setup inicial - Camada Landing (Simulação sistema origem)
 -- Executar apenas uma vez
 -- =========================================================

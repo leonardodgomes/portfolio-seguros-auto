@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 -- =========================================================
 -- 01_01_simulacao_dados_carga inicial.SQL
 -- Setup inicial - Camada Landing (Simulação sistema origem)

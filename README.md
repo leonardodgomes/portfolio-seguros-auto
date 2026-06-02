@@ -22,33 +22,34 @@ O projeto está organizado seguindo as melhores práticas de controlo de versão
 ```text
 📁 portfolio-seguros-databricks-pbi
 │
-├── 📁 src                               
-│   ├── 01_simulacao_gerador_dados.sql
+├── 📁 src
+│   ├── 📁 00_gerador_dados
+│   │   ├── 01_simulacao_dados_carga_inicial.sql   <- Script isolado para testes manuais
+│   │   └── 01_simulacao_dados_incremental.sql     <- Injeção de novos dados para validação
 │   │
-│   ├── 📁 bronze
+│   ├── 📁 01_bronze                               <- Scripts de Ingestão e Criação Raw
 │   │   ├── 02_ingestao_bronze_clientes.sql
 │   │   ├── 03_ingestao_bronze_apolices.sql
 │   │   ├── 04_ingestao_bronze_sinistros.sql
 │   │   ├── 05_ingestao_bronze_codigos_postais.sql
 │   │   └── 06_ingestao_bronze_planos_produtos.sql
 │   │
-│   ├── 📁 silver
-│   │   └── 07_transformacao_prata_principal.sql
+│   ├── 📁 02_silver
+│   │   └── 07_transformacao_prata_principal.sql   <- Limpeza e enriquecimento unificado
 │   │
-│   └── 📁 gold
+│   └── 📁 03_gold                                 <- Agregações finais de Negócio
 │       ├── 08_agregacao_ouro_risco.sql
 │       └── 09_agregacao_ouro_fraude.sql
 │
-│
 ├── 📁 powerbi
-│   ├── dashboard_seguros.pbix                 <- Template do relatório final
-│   └── dax_measures.txt                       <- Central de fórmulas DAX (Loss Ratio, YoY, etc.)
+│   ├── dashboard_seguros.pbix                     <- Template do relatório final
+│   └── dax_measures.txt                           <- Central de fórmulas DAX
 │
 ├── 📁 docs
-│   ├── dicionario_dados.md                    <- Metadados e regras de negócio
-│   └── screenshot_workflow.png                <- Print screen do DAG do Databricks Workflow
+│   ├── dicionario_dados.md                        <- Metadados e regras de negócio
+│   └── screenshot_workflow.png                    <- Print screen do DAG do Databricks Workflow
 │
-└── README.md                                  <- Documentação principal
+└── README.md                                      <- Documentação principal
 ```
 
 ---
